@@ -1,0 +1,23 @@
+server:
+  port: 8082
+  
+spring:
+  profiles:
+    active:
+    - local  main:    allow-circular-references: true
+    
+---
+
+spring:
+  profiles: local
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:mysql://localhost:3306/OJHA_USER
+    username: root
+    password: pass@word1
+
+eureka:
+  client:
+    enabled: false
